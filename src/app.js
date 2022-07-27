@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', (req, res) => {
-    res.render('index', {title: 'Account Summary', accounts: 'accounts'})
+    res.render('index', {title: 'Account Summary', accounts: accounts})
 })
 
 app.listen(3000, () =>{
