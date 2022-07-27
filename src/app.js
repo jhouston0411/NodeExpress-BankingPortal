@@ -1,7 +1,7 @@
 const fs  = require('fs');
 const path = require('path');
 const express = require('express');
-const PORT = process.env.PORT || 3000;
+
 
 const app = express();
 
@@ -13,13 +13,16 @@ app.set('view engine', 'ejs');
  const accountData =  fs.readFileSync('src/json/accounts.json', 'utf8');
  const accounts = JSON.parse(accountData);
 
+ const userData =  fs.readFileSync('src/json/users.json', 'utf8');
+ const users = JSON.parse(accountData);
+
 
 
 app.get('/', (req, res) => {
-    res.render('index', {title: 'index'})
+    res.render('index', {title: 'Account Summary', accounts: 'accounts'})
 })
 
-app.listen(PORT, () =>{
-    console.log("Running on port:", PORT)
+app.listen(3000, () =>{
+    console.log("Running on port:", 3000)
 })
 
