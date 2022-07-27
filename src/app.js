@@ -1,6 +1,7 @@
 const fs  = require('fs');
 const path = require('path');
 const express = require('express');
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -11,3 +12,8 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render('index', {title: 'index'})
 })
+
+app.listen(PORT, () =>{
+    console.log("Running on port:", PORT)
+})
+
