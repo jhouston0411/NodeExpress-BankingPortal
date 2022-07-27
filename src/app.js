@@ -43,7 +43,7 @@ app.post('/transfer', (req, res) =>{
    
     accounts[req.body.from].balance = accounts[req.body.from].balance - req.body.amount;
     accounts[req.body.to].balance = parseInt(accounts[req.body.to].balance) + parseInt(req.body.amount, 10);
-    console.log(accounts)
+   
 })
 app.listen(3000, () =>{
     console.log("Running on port:", 3000)
