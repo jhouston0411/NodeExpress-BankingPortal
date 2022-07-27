@@ -19,8 +19,9 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res) => {
     res.render('index', {title: 'Account Summary', accounts: accounts})
 })
-app.use('./account', accountRoutes);
-app.use('./services', servicesRoutes);
+
+app.use('/account', accountRoutes);
+app.use('/services', servicesRoutes);
 
 app.get('/profile', (req, res) =>{
     res.render('profile', {user: users[0]})
