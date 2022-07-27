@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
  const accounts = JSON.parse(accountData);
 
  const userData =  fs.readFileSync('src/json/users.json', 'utf8');
- const users = JSON.parse(accountData);
+ const users = JSON.parse(userData);
 
 
 
