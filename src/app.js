@@ -47,7 +47,7 @@ app.post('/transfer', (req, res) =>{
 
     fs.writeFileSync(path.join(__dirname, 'json/accounts.json'), accountsJSON, 'utf8');
 
-    res.render('transfer', {message: 'Transfer complete'})
+    res.render('transfer', {message: 'Transfer Completed'})
 
 })
 app.get('/payment', (req, res) =>{
